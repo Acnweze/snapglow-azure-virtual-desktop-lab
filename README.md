@@ -78,7 +78,7 @@ Enabled Start VM on Connect and configured an AVD scaling plan for weekday busin
 
 ### 6. Backup and recovery
 
-Configured Azure Backup using Recovery Services Vault with a daily backup policy and verified application-consistent recovery points. A restore to an alternate VM was also tested. The Azure File Recovery client encountered an `Index was outside the bounds of the array` error during the file-level recovery test, which was documented as a troubleshooting finding rather than hidden.
+Configured Azure Backup using Recovery Services Vault with a daily backup policy and verified application-consistent recovery points. A restore to an alternate VM was also tested. The Azure File Recovery client encountered an `Index was out of bounds` error during the file-level recovery test, which was documented as a troubleshooting finding rather than hidden.
 
 ### 7. Cost management
 
@@ -86,15 +86,7 @@ Created a dedicated SnapGlow monthly budget of **$20** with an actual-cost alert
 
 ### 8. Troubleshooting
 
-Performed practical AVD troubleshooting checks including:
-
-- Session host power and health state
-- AVD health checks
-- Drain mode
-- Maximum session capacity
-- Application group assignments
-- Workspace/application-group association
-- Outbound HTTPS connectivity
+Performed practical AVD troubleshooting checks including session host power and health state, AVD health checks, drain mode, maximum session capacity, application group assignments, workspace/application-group association, and outbound HTTPS connectivity.
 
 Network testing from the session host confirmed TCP connectivity to `www.microsoft.com` on port 443.
 
@@ -129,7 +121,51 @@ Instead of immediately changing settings, each incident was narrowed down by che
 
 ## Screenshots
 
-The screenshots are organized in the `screenshots/` directory and numbered in a logical sequence.
+The screenshots below document the major configuration and validation stages of the lab.
+
+### AVD Configuration
+
+| Host Pool | Session Host |
+|---|---|
+| ![Host Pool](screenshots/01-host-pool.png) | ![Session Host](screenshots/02-session-host.png) |
+
+| Host Pool Properties | Application Group |
+|---|---|
+| ![Host Pool Properties](screenshots/03-host-pool-properties.png) | ![Application Group](screenshots/04-application-group.png) |
+
+| Workspace | User Assignments |
+|---|---|
+| ![Workspace](screenshots/05-workspace.png) | ![User Assignments](screenshots/06-user-assignments.png) |
+
+### Access, RBAC and Scaling
+
+| AVD Assignment | VM User Login RBAC |
+|---|---|
+| ![AVD Assignment](screenshots/07-avd-assignment.png) | ![VM User Login RBAC](screenshots/08-vm-user-login-rbac.png) |
+
+| Subscription RBAC | Device Settings |
+|---|---|
+| ![Subscription RBAC](screenshots/09-subscription-rbac.png) | ![Device Settings](screenshots/10-device-settings.png) |
+
+| Scaling Plan | Windows Version |
+|---|---|
+| ![Scaling Plan](screenshots/11-scaling-plan.png) | ![Windows Version](screenshots/12-windows-version.png) |
+
+### User Experience and Validation
+
+| User 1 Session | Session Desktop |
+|---|---|
+| ![User 1 Session](screenshots/13-user01-session-desktop.png) | ![Session Desktop](screenshots/14-session-desktop.png) |
+
+| User 2 — No Available Resources | User 2 Window App |
+|---|---|
+| ![User 2 Disconnected](screenshots/15-user02-disconnected.png) | ![User 2 Window App](screenshots/16-user02-window-app.png) |
+
+### Cost and Connectivity
+
+| Monthly Budget | Microsoft Connectivity Test |
+|---|---|
+| ![Monthly Budget](screenshots/17-monthly-budget.png) | ![Microsoft Connectivity](screenshots/18-microsoft-connectivity.png) |
 
 ## Important Lab Notes
 
