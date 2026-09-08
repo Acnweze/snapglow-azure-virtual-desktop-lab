@@ -145,8 +145,3 @@ The screenshots are organized in the `screenshots/` directory and numbered in a 
 **Azure:** Azure Virtual Desktop, Entra ID, Intune, RBAC, Azure Backup, Cost Management, VM management  
 **Windows:** Windows 11 Enterprise multi-session, PowerShell, session-host administration, troubleshooting  
 **Operations:** Identity and access management, remote desktop delivery, capacity management, backup/recovery testing, cost control, incident troubleshooting
-
-## Author
-
-**Agatha Nweze**  
-Azure Administrator / Cloud Support Engineer — hands-on Azure and Windows administration portfolio project.
